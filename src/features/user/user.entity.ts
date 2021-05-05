@@ -4,24 +4,30 @@ import { UserStatus } from '@features/user/user.status';
 import { Nullable } from '@cores/types';
 import { UserMetaEntity } from '@features/user/user-meta.entity';
 import * as bcrypt from 'bcrypt';
+import { AutoMap } from 'nestjsx-automapper';
 
 @Entity({ name: 'users' })
 export class UserEntity extends BaseEntity {
+  @AutoMap()
   @Column({ type: 'varchar', unique: true })
   username: string;
 
   @Column({ type: 'varchar', nullable: false })
   password: string;
 
+  @AutoMap()
   @Column({ type: 'varchar', nullable: true })
   firstName: Nullable<string>;
 
+  @AutoMap()
   @Column({ type: 'varchar', nullable: true })
   lastName: Nullable<string>;
 
+  @AutoMap()
   @Column({ type: 'varchar', nullable: true })
   email: Nullable<string>;
 
+  @AutoMap()
   @Column({ type: 'varchar', nullable: true })
   displayName: Nullable<string>;
 

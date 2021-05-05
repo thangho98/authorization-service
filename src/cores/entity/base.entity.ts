@@ -6,8 +6,10 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 import { Nullable, Optional } from '../types';
+import { AutoMap } from 'nestjsx-automapper';
 
 export abstract class BaseEntity {
+  @AutoMap()
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
