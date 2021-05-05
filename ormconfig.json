@@ -1,0 +1,25 @@
+{
+  "type": "postgres",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "username": "postgres",
+  "password": "postgres",
+  "database": "postgres",
+  "entities": [
+    "**/*.entity{.ts,.js}"
+  ],
+  "migrationsTableName": "migrations",
+  "migrations": [
+    "database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "database/migrations"
+  },
+  "ssl": false,
+  "seeds": [
+    "database/seeds/**/*{.ts,.js}"
+  ],
+  "factories": [
+    "database/factories/**/*{.ts,.js}"
+  ]
+}

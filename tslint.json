@@ -1,0 +1,17 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "member-ordering": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "variable-name": false,
+    "no-trailing-whitespace": false,
+    "quotemark": [true, "single"],
+    "no-consecutive-blank-lines": false,
+    "lines-between-class-members": [true, 1]
+  },
+  "linterOptions": {
+    "exclude": ["./node_modules/**", "database"]
+  },
+  "rulesDirectory": ["node_modules/tslint-lines-between-class-members"]
+}

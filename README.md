@@ -1,6 +1,8 @@
+<h1 align="center">Authorization Service</h1>
+
 ## Description
 
-Base On [Nest](https://github.com/nestjs/nest) framework TypeScript starter 
+Base On [NestJS](https://github.com/nestjs/nest), framework TypeScript starter 
 repository.
 
 ## Installation
@@ -12,6 +14,9 @@ $ npm install
 ## Running the app
 
 ```bash
+# init database
+$ npm run db:init
+
 # development
 $ npm run start
 

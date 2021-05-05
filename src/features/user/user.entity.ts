@@ -1,0 +1,48 @@
+import { BaseEntity } from '@cores/entity/base.entity';
+import { BeforeInsert, Column, Entity, OneToMany } from 'typeorm';
+import { UserStatus } from '@features/user/user.status';
+import { Nullable } from '@cores/types';
+import { UserMetaEntity } from '@features/user/user-meta.entity';
+import * as bcrypt from 'bcrypt';
+
+@Entity({ name: 'users' })
+export class UserEntity extends BaseEntity {
+  @Column({ type: 'varchar', unique: true })
+  username: string;
+
+  @Column({ type: 'varchar', nullable: false })
+  password: string;
+
+  @Column({ type: 'varchar', nullable: true })
+  firstName: Nullable<string>;
+
+  @Column({ type: 'varchar', nullable: true })
+  lastName: Nullable<string>;
+
+  @Column({ type: 'varchar', nullable: true })
+  email: Nullable<string>;
+
+  @Column({ type: 'varchar', nullable: true })
+  displayName: Nullable<string>;
+
+  @Column({ default: true })
+  isActive: boolean;
+
+  @Column({ type: 'timestamptz', nullable: true })
+  registeredAt: Nullable<Date>;
+
+  @Column({ type: 'timestamptz', nullable: true })
+  lastLogin: Nullable<Date>;
+
+  @Column({ type: 'varchar', length: 10, default: UserStatus.Activate })
+  status: UserStatus;
+
+  @OneToMany((type) => UserMetaEntity, (metadata) => metadata.user)
+  metadata: UserMetaEntity[];
+
+  @BeforeInsert()
+  async setPassword(password: string) {
+    const salt = await bcrypt.genSalt();
+    this.password = await bcrypt.hash(password || this.password, salt);
+  }
+}

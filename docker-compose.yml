@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+#  service:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - "3000:3000"
+#      - "9229:9229"
+#    env_file:
+#      - ./.env
+#    volumes:
+#      - .:/usr/src/app
+#    depends_on:
+#      - redis
+#      - db
+#    links:
+#      - redis
+#      - db
+#    networks:
+#      - nodes-core
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_PASSWORD=dev@123
+      - TCP_PORTS="6379"
+    command: redis-server --appendonly yes --requirepass dev@123
+    volumes:
+      - ./data/redis-master-data:/data
+    networks:
+      - nodes-core
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - nodes-core
+networks:
+  nodes-core:
