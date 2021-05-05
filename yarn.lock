@@ -569,6 +569,13 @@
     semver "^7.3.4"
     tar "^6.1.0"
 
+"@nartc/automapper@7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@nartc/automapper/-/automapper-7.0.4.tgz#7a7336b7023e882ce0641e54199dd5c3e8a5797f"
+  integrity sha512-0Qax/6nmFuoi66UPVXWayN7DCpR/0UB9MxT3sWHdJEd6ZsbW+IYvs2lpPOg2ypTrWHNzJJqW7cFM+G3eILx7dg==
+  dependencies:
+    lodash.set "4.3.2"
+
 "@nestjs/cli@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-7.6.0.tgz#661f99b578284f9124307a8077f004a091b25e77"
@@ -4189,6 +4196,11 @@ lodash.once@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
 
+lodash.set@4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/lodash.set/-/lodash.set-4.3.2.tgz#d8757b1da807dde24816b0d6a84bea1a76230b23"
+  integrity sha1-2HV7HagH3eJIFrDWqEvqGnYjCyM=
+
 lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
@@ -4499,6 +4511,13 @@ neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+nestjsx-automapper@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/nestjsx-automapper/-/nestjsx-automapper-3.1.4.tgz#22efba0c10fe6815596fdc84af8cd1a4fd02d215"
+  integrity sha512-uw2edSRb3Dilhu2kYpcjzqh+9EH9mbmulPGr0/KgOwH1MgEBoRg/sSraYFBHwTddN9ZVtQgCcxjfjyCR1fNxaQ==
+  dependencies:
+    "@nartc/automapper" "7.0.4"
 
 nice-try@^1.0.4:
   version "1.0.5"
