@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Unique } from 'typeorm';
-import { UserEntity } from '@features/user/user.entity';
+import { UserEntity } from '@features/user/enitity/user.entity';
 
 @Entity({ name: 'user_meta' })
 @Unique(['user', 'key'])

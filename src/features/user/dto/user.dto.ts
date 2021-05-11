@@ -2,7 +2,7 @@ import { AutoMap, Profile, ProfileBase } from 'nestjsx-automapper';
 import { Nullable } from '@cores/types';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class UserProfileDto {
+export class UserDto {
   @ApiProperty({ type: 'string', required: true })
   @AutoMap()
   public readonly id: string;
@@ -21,7 +21,10 @@ export class UserProfileDto {
   @ApiProperty({ type: 'string', required: true, nullable: true })
   @AutoMap()
   public readonly displayName: Nullable<string>;
-  @ApiProperty({ type: 'number', required: true, nullable: true })
+  @ApiProperty({ type: 'string', required: true, nullable: true })
   @AutoMap()
   public readonly lastLogin: Nullable<number>;
+  @ApiProperty({ type: 'string', required: true, nullable: true })
+  @AutoMap()
+  public readonly createdAt: Nullable<number>;
 }

@@ -2,7 +2,7 @@ import { BaseEntity } from '@cores/entity/base.entity';
 import { BeforeInsert, Column, Entity, OneToMany } from 'typeorm';
 import { UserStatus } from '@features/user/user.status';
 import { Nullable } from '@cores/types';
-import { UserMetaEntity } from '@features/user/user-meta.entity';
+import { UserMetaEntity } from '@features/user/enitity/user-meta.entity';
 import * as bcrypt from 'bcrypt';
 import { AutoMap } from 'nestjsx-automapper';
 
@@ -12,6 +12,7 @@ export class UserEntity extends BaseEntity {
   @Column({ type: 'varchar', unique: true })
   username: string;
 
+  @AutoMap()
   @Column({ type: 'varchar', nullable: false })
   password: string;
 

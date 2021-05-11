@@ -11,7 +11,7 @@
     "lines-between-class-members": [true, 1]
   },
   "linterOptions": {
-    "exclude": ["./node_modules/**", "database"]
+    "exclude": ["./node_modules/**", "database","data"]
   },
   "rulesDirectory": ["node_modules/tslint-lines-between-class-members"]
 }

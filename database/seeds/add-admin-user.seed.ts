@@ -1,6 +1,6 @@
 // add-admin-user.seed.ts
 import { Factory, Seeder } from 'typeorm-seeding';
-import { UserEntity } from '../../src/features/user/user.entity';
+import { UserEntity } from '../../src/features/user/enitity/user.entity';
 import { Connection } from 'typeorm';
 import { UserStatus } from '../../src/features/user/user.status';
 

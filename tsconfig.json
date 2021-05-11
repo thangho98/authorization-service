@@ -17,5 +17,5 @@
       "@config": ["src/config"]
     }
   },
-  "exclude": ["database"]
+  "exclude": ["database","data"]
 }

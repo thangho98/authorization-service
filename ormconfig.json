@@ -6,7 +6,7 @@
   "password": "postgres",
   "database": "postgres",
   "entities": [
-    "**/*.entity{.ts,.js}"
+    "src/**/*.entity{.ts,.js}"
   ],
   "migrationsTableName": "migrations",
   "migrations": [

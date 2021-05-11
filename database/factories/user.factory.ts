@@ -1,5 +1,5 @@
 import { define } from 'typeorm-seeding';
-import { UserEntity } from '../../src/features/user/user.entity';
+import { UserEntity } from '../../src/features/user/enitity/user.entity';
 import { UserStatus } from '../../src/features/user/user.status';
 
 define(UserEntity, () => {
